@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #529871;
+  --color-primary-hover: #3B7A57;
+  --color-secondary: #8B9E87;
+  --color-bg: #F7F9F7;
+  --color-card: #FFFFFF;
+  --color-sidebar: #F0F5F1;
+  --color-text-primary: #1E2F23;
+  --color-text-secondary: #4A6353;
+  --color-text-muted: #7D9686;
+  --color-border: #DCE6DF;
+  --color-accent: #61A882;
+  --color-glow: rgba(82, 152, 113, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Texture classes */
+.texture-subtle-dots {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.texture-linen {
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.015) 0px, rgba(0, 0, 0, 0.015) 2px, transparent 2px, transparent 4px);
+}
+
+.texture-paper {
+  background-image: radial-gradient(rgba(0,0,0,0.02) 15%, transparent 16%), radial-gradient(rgba(0,0,0,0.02) 15%, transparent 16%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.texture-gradient {
+  background: radial-gradient(circle at 10% 20%, rgba(var(--color-primary), 0.06) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(var(--color-secondary), 0.06) 0%, transparent 40%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 140, 130, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 140, 130, 0.45);
+}
+
+/* Glass effect */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-panel {
+  background: rgba(30, 25, 35, 0.85);
+}
